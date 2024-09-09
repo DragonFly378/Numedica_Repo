@@ -9,12 +9,12 @@ const Jumbotron = () => {
   return (
     <>
       <section className="jumbotron-section md:my-[150px] my-[90px]">
-        <div className="container md:w-10/12 w-11/12 mx-auto">
+        <div className=" md:w-10/12 w-11/12 mx-auto">
           <div className="grid grid-cols-12 gap-y-12 items-center">
             <div className="left-contents md:col-span-6 col-span-full">
               <div className="header-copy md:pr-16 ">
                 <BoxReveal boxColor={"#5046e6"} duration={0.5}>
-                  <h2 className="header text-primary-dark font-bold md:text-[42px] text-[28px] leading-[48px] md:leading-[60px] text-center md:text-left capitalize">
+                  <h2 className="header text-primary-dark font-bold md:text-[42px] text-[34px] leading-[48px] md:leading-[60px] text-center md:text-left capitalize">
                     Welcome to the space <br /> where doctors listen to you
                   </h2>
                 </BoxReveal>
@@ -30,7 +30,7 @@ const Jumbotron = () => {
                 </h2> */}
 
                 <BoxReveal boxColor={"#5046e6"} duration={0.5}>
-                  <p className="subtitle text-primary-dark font-normal text-lg md:text-xl leading-[28px] md:leading-[32px] text-center md:text-left">
+                  <p className="subtitle text-primary-dark font-normal text-base md:text-xl leading-[28px] md:leading-[32px] text-center md:text-left">
                     Here, you are more than just a patient. Someone with a
                     story, and our doctors are here to listen, to care, and to
                     guide you with the understanding and compassion that define

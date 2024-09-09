@@ -32,7 +32,7 @@ const Navbar = () => {
       <section className="navbar-section">
         {/* web view */}
         <nav className="navbar-web hidden md:block">
-          <div className="container md:w-11/12 mx-auto">
+          <div className=" w-11/12 mx-auto">
             <div className="navbar-contents md:flex md:justify-between md:py-5">
               <div className="nav-logo">
                 <Image

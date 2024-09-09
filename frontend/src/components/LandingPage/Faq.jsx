@@ -43,7 +43,7 @@ const Faq = () => {
   return (
     <>
       <section id="faq" className="faq-section md:my-[150px] my-[90px]">
-        <div className="container md:w-10/12 w-11/12 mx-auto">
+        <div className="w-11/12 md:w-10/12 mx-auto">
           <HeaderSection
             title={"Frequently asked Questions"}
             caption={
@@ -84,9 +84,11 @@ const Faq = () => {
                     </button>
                     <MagicCard
                       gradientColor={"#c0f4f570"}
-                      className={`caption rounded-b-xl bg-white py-3 px-5 ${
-                        item.isOpen ? "block" : "hidden"
-                      }  text-primary-dark text-center text-sm`}
+                      className={`caption rounded-b-xl bg-white py-3 px-5 transition-all duration-500 ease-in-out overflow-hidden ${
+                        item.isOpen
+                          ? "max-h-96 opacity-100"
+                          : "max-h-0 opacity-0"
+                      } text-primary-dark text-center text-sm`}
                     >
                       {item.answer}
                     </MagicCard>{" "}

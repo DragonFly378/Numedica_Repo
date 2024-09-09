@@ -68,7 +68,7 @@ const Pricing = () => {
   return (
     <>
       <section id="pricing" className="pricing-section md:my-[150px] my-[90px]">
-        <div className="container md:w-10/12 w-11/12 mx-auto">
+        <div className=" md:w-10/12 w-11/12 mx-auto">
           <FadeText
             // className="text-4xl font-bold text-black dark:text-white"
             direction="left"

@@ -102,7 +102,7 @@ const Footer = () => {
             })}
           </div>
         </div>
-        <div className="copyright py-3 mt-6 text-white text-center bg-primary-dark text-xs md:text-base">
+        <div className="copyright py-6 mt-6 text-white text-center bg-primary-dark text-xs md:text-base">
           Copyright 2024 • All rights reserved • Numedica365
         </div>
       </section>

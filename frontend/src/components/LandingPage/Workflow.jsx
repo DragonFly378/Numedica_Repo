@@ -38,7 +38,7 @@ const Workflow = () => {
   return (
     <>
       <section id="works" className="workflow-section md:my-[150px] my-[90px]">
-        <div className="container md:w-10/12 w-11/12 mx-auto">
+        <div className=" md:w-10/12 w-11/12 mx-auto">
           <HeaderSection
             title={"How it works?"}
             caption={

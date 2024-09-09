@@ -50,15 +50,15 @@ const Testimony = () => {
         id="testimony"
         className="testimony-section bg-primary-dark md:py-16 py-12  md:my-[150px] my-[90px]"
       >
-        <div className="container md:w-10/12 w-11/12 mx-auto">
+        <div className=" w-11/12 md:w-10/12 mx-auto">
           <HeaderSection
             title={"What our patients say"}
             caption={
-              "Hear from those who matter most: our patients. Discover their stories and experiences with our care, and see how we’ve made a difference in their health and lives"
+              "Hear from those who matter most: our patients. Discover their stories and experiences with our care, and see how we have made a difference in their health and lives"
             }
             isBackground={true}
           />
-          <div className="testimoy-contents flex flex-nowrap scrolling-touch items-start space-x-2 overflow-x-scroll rounded-lg">
+          <div className="testimoy-contents w-full flex flex-nowrap scrolling-touch items-start space-x-2 overflow-x-scroll rounded-lg">
             {feedbackContents.map((item, itemIdx) => {
               return (
                 <>

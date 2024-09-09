@@ -1,4 +1,4 @@
-"use client";;
+"use client";
 import React, { useCallback, useEffect } from "react";
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 
@@ -9,16 +9,19 @@ export function MagicCard({
   className,
   gradientSize = 200,
   gradientColor = "#262626",
-  gradientOpacity = 0.8
+  gradientOpacity = 0.8,
 }) {
   const mouseX = useMotionValue(-gradientSize);
   const mouseY = useMotionValue(-gradientSize);
 
-  const handleMouseMove = useCallback((e) => {
-    const { left, top } = e.currentTarget.getBoundingClientRect();
-    mouseX.set(e.clientX - left);
-    mouseY.set(e.clientY - top);
-  }, [mouseX, mouseY]);
+  const handleMouseMove = useCallback(
+    (e) => {
+      const { left, top } = e.currentTarget.getBoundingClientRect();
+      mouseX.set(e.clientX - left);
+      mouseY.set(e.clientY - top);
+    },
+    [mouseX, mouseY]
+  );
 
   const handleMouseLeave = useCallback(() => {
     mouseX.set(-gradientSize);
@@ -31,13 +34,11 @@ export function MagicCard({
   }, [mouseX, mouseY, gradientSize]);
 
   return (
-    (<div
+    <div
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className={cn(
-        "group relative flex size-full overflow-hidden ",
-        className
-      )}>
+      className={cn("group relative  size-full overflow-hidden ", className)}
+    >
       <div className="relative z-10">{children}</div>
       <motion.div
         className="pointer-events-none absolute -inset-px  opacity-0 transition-opacity duration-300 group-hover:opacity-100"
@@ -46,7 +47,8 @@ export function MagicCard({
             radial-gradient(${gradientSize}px circle at ${mouseX}px ${mouseY}px, ${gradientColor}, transparent 60%)
           `,
           opacity: gradientOpacity,
-        }} />
-    </div>)
+        }}
+      />
+    </div>
   );
 }
