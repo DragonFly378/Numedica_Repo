@@ -63,8 +63,19 @@ const Pricing = () => {
 
   return (
     <>
-      <section id="pricing" className="pricing-section md:my-[150px]">
-        <div className="container md:w-10/12 mx-auto">
+      <section id="pricing" className="pricing-section md:my-[150px] my-[90px]">
+        <div className="container md:w-10/12 w-11/12 mx-auto">
+          <div className="pricing-image md:hidden mb-4 mx-auto">
+            <Image
+              className=" mx-auto"
+              src={pricingImage}
+              width={0}
+              alt="hero-img"
+              height={0}
+              sizes="100vw"
+              style={{ width: "80%", height: "auto" }} // optional
+            />
+          </div>
           <HeaderSection
             title={"Online doctor visit pricing"}
             caption={
@@ -72,9 +83,9 @@ const Pricing = () => {
             }
             isBackground={false}
           />
-          <div className="md:w-10/12 mx-auto grid grid-cols-12">
+          <div className="md:w-10/12 w-11/12 mx-auto grid grid-cols-12">
             <div className="left-content md:col-span-6 relative">
-              <div className="pricing-image md:w-10/12 mx-auto">
+              <div className="pricing-image hidden md:block md:w-10/12 mx-auto">
                 <Image
                   className=" mx-auto"
                   src={pricingImage}
@@ -106,18 +117,18 @@ const Pricing = () => {
                 </form>
               </div>
             </div>
-            <div className="right-content content-start  md:col-span-6">
-              <div className="card-price md:w-7/12 mr-auto rounded-lg border-[1px] border-primary-dark md:px-5 md:py-6">
+            <div className="right-content content-center md:content-start col-span-full md:col-span-6">
+              <div className="card-price w-11/12 md:w-7/12 mx-auto md:mr-auto rounded-lg border-[1px] border-primary-dark px-3 py-4 md:px-5 md:py-6">
                 <div className="flex flex-col md:gap-y-5">
                   <div className="header-content flex flex-col gap-y-2">
-                    <h4 className="header-copy text-primary-dark font-bold md:text-lg text-center">
+                    <h4 className="header-copy text-primary-dark font-bold text-lg text-center">
                       Pricing plans
                     </h4>{" "}
-                    <div className="grid grid-cols-11 gap-x-1 mx-auto ">
-                      <div className="col-span-4 text-left caption md:text-base text-primary-dark">
+                    <div className="grid grid-cols-12 gap-x-0 md:gap-x-1 mx-auto ">
+                      <div className="col-span-4 text-left caption text-base text-primary-dark ">
                         Bill per visit
                       </div>
-                      <div className="col-span-3 mx-auto text-center">
+                      <div className="col-span-4 mx-auto text-center">
                         <label class="inline-flex items-center cursor-pointer">
                           <input
                             type="checkbox"
@@ -131,7 +142,7 @@ const Pricing = () => {
                       </div>
                       <div className="col-span-4 text-left caption md:text-base text-primary-dark">
                         Membership <br />{" "}
-                        <span className="discount rounded-full text-center text-white bg-pink-soft md:px-3 md:py-1">
+                        <span className="discount rounded-full text-center text-white bg-pink-soft px-2 py-1 md:px-3 md:py-1">
                           20% off
                         </span>
                       </div>
@@ -139,7 +150,7 @@ const Pricing = () => {
                   </div>
                   <div className="body-content flex flex-col gap-y-14">
                     <div className="benefits-content flex flex-col gap-y-2">
-                      <div className="price-tag text-primary-dark font-bold md:text-xl">
+                      <div className="price-tag text-primary-dark font-bold text-lg md:text-xl">
                         ${currentCategory.price} MXN
                       </div>{" "}
                       {currentCategory.benefits.map((benefit, benefitIdx) => (
@@ -162,7 +173,7 @@ const Pricing = () => {
                         </div>
                       ))}
                     </div>
-                    <button className="bg-primary-dark text-white md:text-lg md:py-2 md:rounded-lg">
+                    <button className="bg-primary-dark text-white md:text-lg md:py-2 py-1 rounded-md md:rounded-lg">
                       {isChecked ? "Get membership plan" : "Get visit plan"}
                     </button>
                   </div>

@@ -36,8 +36,8 @@ const Workflow = () => {
   ];
   return (
     <>
-      <section id="works" className="workflow-section md:my-[150px]">
-        <div className="container md:w-10/12 mx-auto">
+      <section id="works" className="workflow-section md:my-[150px] my-[90px]">
+        <div className="container md:w-10/12 w-11/12 mx-auto">
           <HeaderSection
             title={"How it works?"}
             caption={
@@ -45,23 +45,23 @@ const Workflow = () => {
             }
             isBackground={false}
           />
-          <div className="workflow-contents grid grid-cols-12 md:gap-x-4 md:w-10/12 mx-auto">
+          <div className="workflow-contents grid grid-cols-12 md:gap-x-4 gap-y-4 md:w-10/12 w-11/12 mx-auto">
             {workflowContents.map((item, itemIdx) => {
               return (
                 <>
-                  <div className="workflow-item col-span-3 bg-white rounded-xl py-8 px-5">
+                  <div className="workflow-item col-span-full md:col-span-3 bg-white rounded-xl py-8 px-5">
                     <div className="flex flex-col">
                       <div className="flow-header text-center">
                         <Image
-                          className="mx-auto md:mb-1"
+                          className="mx-auto md:mb-1 w-2/12 md:w-1/5 h-auto"
                           src={item.icon}
                           width={0}
                           height={0}
                           sizes="100vw"
                           alt={item.title}
-                          style={{ width: "20%", height: "auto" }} // optional
+                          // style={{ width: "20%", height: "auto" }} // optional
                         />
-                        <h4 className="text-primary-dark font-bold md:text-lg text-center">
+                        <h4 className="text-primary-dark font-bold text-base md:text-lg text-center">
                           {item.title}
                         </h4>
                       </div>

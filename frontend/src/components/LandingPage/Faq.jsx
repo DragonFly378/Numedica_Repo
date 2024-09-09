@@ -41,8 +41,8 @@ const Faq = () => {
 
   return (
     <>
-      <section id="faq" className="faq-section md:my-[150px]">
-        <div className="container md:w-10/12 mx-auto">
+      <section id="faq" className="faq-section md:my-[150px] my-[90px]">
+        <div className="container md:w-10/12 w-11/12 mx-auto">
           <HeaderSection
             title={"Frequently asked Questions"}
             caption={
@@ -51,20 +51,20 @@ const Faq = () => {
             isBackground={false}
           />
 
-          <div className="faq-contents grid grid-cols-12 md:gap-x-4 md:w-10/12 mx-auto">
+          <div className="faq-contents grid grid-cols-12 gap-y-3 md:gap-x-4 md:w-10/12 w-11/12 mx-auto">
             {faqContents.map((item, itemIdx) => {
               return (
                 <>
-                  <div className="faq-item col-span-3 flex flex-col">
+                  <div className="faq-item col-span-full md:col-span-3 flex flex-col">
                     <button
                       onClick={() => toggleFaq(itemIdx)}
                       className="faq-header bg-white rounded-t-xl py-3 px-5 text-center"
                     >
-                      <h4 className="text-primary-dark font-bold md:text-lg text-center">
+                      <h4 className="text-primary-dark font-bold text-base md:text-lg text-center">
                         {item.title}
                       </h4>
                       <Image
-                        className={`mx-auto md:mt-1 ${
+                        className={`mx-auto md:w-[5%] w-[4%] h-auto mt-1 ${
                           item.isOpen && "rotate-180"
                         }`}
                         src={arrowBottomIcon}
@@ -72,7 +72,7 @@ const Faq = () => {
                         height={0}
                         sizes="100vw"
                         alt="iconarrow"
-                        style={{ width: "5%", height: "auto" }} // optional
+                        // style={{ width: "5%", height: "auto" }} // optional
                       />
                     </button>
                     <div

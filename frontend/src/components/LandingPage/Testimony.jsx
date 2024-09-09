@@ -48,9 +48,9 @@ const Testimony = () => {
     <>
       <section
         id="testimony"
-        className="testimony-section bg-primary-dark md:py-16  md:my-[150px]"
+        className="testimony-section bg-primary-dark md:py-16 py-12  md:my-[150px] my-[90px]"
       >
-        <div className="container md:w-10/12 mx-auto">
+        <div className="container md:w-10/12 w-11/12 mx-auto">
           <HeaderSection
             title={"What our patients say"}
             caption={
@@ -58,16 +58,16 @@ const Testimony = () => {
             }
             isBackground={true}
           />
-          <div className="testimoy-contents flex flex-nowrap scrolling-touch items-start space-x-2 overflow-x-scroll">
+          <div className="testimoy-contents flex flex-nowrap scrolling-touch items-start space-x-2 overflow-x-scroll rounded-lg">
             {feedbackContents.map((item, itemIdx) => {
               return (
                 <>
                   {" "}
-                  <div className="testimony-item flex-none md:w-[30%] bg-white rounded-lg md:p-4 ">
-                    <div className="copy italic text-soft-grey md:text-base line-clamp-3">
+                  <div className="testimony-item flex-none w-[80%] md:w-[30%] bg-white rounded-lg p-3 md:p-4 ">
+                    <div className="copy italic text-soft-grey text-sm md:text-base line-clamp-3">
                       &quot;{item.caption}&quot;
                     </div>
-                    <div className="flex justify-between md:mt-2">
+                    <div className="flex justify-between md:mt-2 mt-1">
                       <div className="stars flex flex-row gap-x-1">
                         {Array.from({ length: 5 }).map((_, starIdx) => (
                           <Image
