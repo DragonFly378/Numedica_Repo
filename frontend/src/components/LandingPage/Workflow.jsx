@@ -6,6 +6,7 @@ import phoneIcon from "../../../public/assets/icons/phone_in.svg";
 import peopleSyncIcon from "../../../public/assets/icons/people_sync.svg";
 import receiptIcon from "../../../public/assets/icons/receipt.svg";
 import Image from "next/image";
+import ShineBorder from "../magicui/shine-border";
 
 const Workflow = () => {
   const workflowContents = [
@@ -49,7 +50,12 @@ const Workflow = () => {
             {workflowContents.map((item, itemIdx) => {
               return (
                 <>
-                  <div className="workflow-item col-span-full md:col-span-3 bg-white rounded-xl py-8 px-5">
+                  <ShineBorder
+                    borderWidth={1}
+                    color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
+                    className="workflow-item col-span-full md:col-span-3
+                    bg-white rounded-xl py-8 px-5"
+                  >
                     <div className="flex flex-col">
                       <div className="flow-header text-center">
                         <Image
@@ -69,7 +75,7 @@ const Workflow = () => {
                         {item.caption}
                       </div>
                     </div>
-                  </div>
+                  </ShineBorder>
                 </>
               );
             })}

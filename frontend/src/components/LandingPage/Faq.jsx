@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import HeaderSection from "./HeaderSection";
 import Image from "next/image";
 import arrowBottomIcon from "../../../public/assets/icons/arrow_bottom.svg";
+import { MagicCard } from "../magicui/magic-card";
 
 const Faq = () => {
   const [faqContents, setFaqContents] = useState([
@@ -56,32 +57,39 @@ const Faq = () => {
               return (
                 <>
                   <div className="faq-item col-span-full md:col-span-3 flex flex-col">
-                    <button
-                      onClick={() => toggleFaq(itemIdx)}
-                      className="faq-header bg-white rounded-t-xl py-3 px-5 text-center"
-                    >
-                      <h4 className="text-primary-dark font-bold text-base md:text-lg text-center">
-                        {item.title}
-                      </h4>
-                      <Image
-                        className={`mx-auto md:w-[5%] w-[4%] h-auto mt-1 ${
-                          item.isOpen && "rotate-180"
-                        }`}
-                        src={arrowBottomIcon}
-                        width={0}
-                        height={0}
-                        sizes="100vw"
-                        alt="iconarrow"
-                        // style={{ width: "5%", height: "auto" }} // optional
-                      />
+                    {" "}
+                    <button onClick={() => toggleFaq(itemIdx)}>
+                      <MagicCard
+                        className={`faq-header bg-white rounded-t-xl ${
+                          item.isOpen ? "rounded-b-none" : "rounded-b-xl"
+                        } py-3 px-5 text-center`}
+                        // className="cursor-pointer flex-col items-center justify-center shadow-2xl whitespace-nowrap text-4xl"
+                        gradientColor={"#c0f4f570"}
+                      >
+                        <h4 className="text-primary-dark font-bold text-base md:text-lg text-center">
+                          {item.title}
+                        </h4>
+                        <Image
+                          className={`mx-auto md:w-[5%] w-[4%] h-auto mt-1 ${
+                            item.isOpen && "rotate-180"
+                          }`}
+                          src={arrowBottomIcon}
+                          width={0}
+                          height={0}
+                          sizes="100vw"
+                          alt="iconarrow"
+                          // style={{ width: "5%", height: "auto" }} // optional
+                        />
+                      </MagicCard>
                     </button>
-                    <div
-                      className={`caption bg-white rounded-b-xl py-3 px-5 ${
+                    <MagicCard
+                      gradientColor={"#c0f4f570"}
+                      className={`caption rounded-b-xl bg-white py-3 px-5 ${
                         item.isOpen ? "block" : "hidden"
                       }  text-primary-dark text-center text-sm`}
                     >
                       {item.answer}
-                    </div>
+                    </MagicCard>{" "}
                   </div>
                 </>
               );
