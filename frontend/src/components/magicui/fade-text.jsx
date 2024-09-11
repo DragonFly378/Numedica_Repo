@@ -1,4 +1,4 @@
-"use client";;
+"use client";
 import { useMemo } from "react";
 import { motion } from "framer-motion";
 
@@ -11,7 +11,7 @@ export function FadeText({
     show: { opacity: 1, transition: { type: "spring" } },
   },
 
-  text
+  text,
 }) {
   const directionOffset = useMemo(() => {
     const map = { up: 10, down: -10, left: -10, right: 10 };
@@ -39,12 +39,14 @@ export function FadeText({
   }, [directionOffset, axis, framerProps]);
 
   return (
-    (<motion.div
+    <motion.div
       initial="hidden"
       animate="show"
+      className={className}
       viewport={{ once: true }}
-      variants={FADE_ANIMATION_VARIANTS}>
-      <motion.span className={className}>{text}</motion.span>
-    </motion.div>)
+      variants={FADE_ANIMATION_VARIANTS}
+    >
+      <motion.span>{text}</motion.span>
+    </motion.div>
   );
 }

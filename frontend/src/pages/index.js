@@ -17,7 +17,7 @@ export default function Home() {
       </Head>
       <Layout>
         <Jumbotron />
-        <Workflow />åß
+        <Workflow />
         <Testimony />
         <Faq />
         <Pricing />

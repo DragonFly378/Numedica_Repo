@@ -7,6 +7,8 @@ import peopleSyncIcon from "../../../public/assets/icons/people_sync.svg";
 import receiptIcon from "../../../public/assets/icons/receipt.svg";
 import Image from "next/image";
 import ShineBorder from "../magicui/shine-border";
+import BlurFade from "../magicui/blur-fade";
+import { FadeText } from "../magicui/fade-text";
 
 const Workflow = () => {
   const workflowContents = [
@@ -50,32 +52,43 @@ const Workflow = () => {
             {workflowContents.map((item, itemIdx) => {
               return (
                 <>
-                  <ShineBorder
-                    borderWidth={1}
-                    color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
-                    className="workflow-item col-span-full md:col-span-3
-                    bg-white rounded-xl py-8 px-5"
-                  >
-                    <div className="flex flex-col">
-                      <div className="flow-header text-center">
-                        <Image
-                          className="mx-auto md:mb-1 w-2/12 md:w-1/5 h-auto"
-                          src={item.icon}
-                          width={0}
-                          height={0}
-                          sizes="100vw"
-                          alt={item.title}
-                          // style={{ width: "20%", height: "auto" }} // optional
-                        />
-                        <h4 className="text-primary-dark font-bold text-base md:text-lg text-center">
-                          {item.title}
-                        </h4>
-                      </div>
-                      <div className="caption md:mt-4 text-primary-dark text-center text-sm md:h-[86px]">
-                        {item.caption}
-                      </div>
-                    </div>
-                  </ShineBorder>
+                  <FadeText
+                    // className="text-4xl font-bold text-black dark:text-white"
+                    direction="up"
+                    framerProps={{
+                      show: { transition: { delay: 0.2 * (itemIdx + 1) } },
+                    }}
+                    className={"col-span-full md:col-span-3 "}
+                    text={
+                      <ShineBorder
+                        borderWidth={1}
+                        className={
+                          "workflow-item col-span-full md:col-span-3 bg-white rounded-xl py-8 px-3 h-full"
+                        }
+                        color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
+                      >
+                        <div className="flex flex-col">
+                          <div className="flow-header text-center">
+                            <Image
+                              className="mx-auto md:mb-1 w-2/12 md:w-1/5 h-auto"
+                              src={item.icon}
+                              width={0}
+                              height={0}
+                              sizes="100vw"
+                              alt={item.title}
+                              // style={{ width: "20%", height: "auto" }} // optional
+                            />
+                            <h4 className="text-primary-dark font-bold text-base md:text-lg text-center">
+                              {item.title}
+                            </h4>
+                          </div>
+                          <div className="caption md:mt-4 text-primary-dark text-center text-sm">
+                            {item.caption}
+                          </div>
+                        </div>
+                      </ShineBorder>
+                    }
+                  />
                 </>
               );
             })}
