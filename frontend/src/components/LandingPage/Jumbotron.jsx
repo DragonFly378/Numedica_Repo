@@ -8,7 +8,7 @@ import BoxReveal from "../magicui/box-reveal";
 const Jumbotron = () => {
   return (
     <>
-      <section className="jumbotron-section md:my-[150px] my-[90px]">
+      <section className="jumbotron-section md:my-[150px] mt-[150px] mb-[90px]">
         <div className=" md:w-10/12 w-11/12 mx-auto">
           <div className="grid grid-cols-12 gap-y-12 items-center">
             <div className="left-contents md:col-span-6 col-span-full">
