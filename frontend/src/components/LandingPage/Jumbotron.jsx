@@ -8,14 +8,16 @@ import BoxReveal from "../magicui/box-reveal";
 const Jumbotron = () => {
   return (
     <>
-      <section className="jumbotron-section md:my-[150px] mt-[150px] mb-[90px]">
+      <section className="jumbotron-section md:my-[120px] mt-[150px] mb-[90px]">
         <div className=" md:w-10/12 w-11/12 mx-auto">
           <div className="grid grid-cols-12 gap-y-12 items-center">
             <div className="left-contents md:col-span-6 col-span-full">
               <div className="header-copy md:pr-16 ">
                 <BoxReveal boxColor={"#5046e6"} duration={0.5}>
-                  <h2 className="header text-primary-dark font-bold md:text-[42px] text-[34px] leading-[48px] md:leading-[60px] text-center md:text-left capitalize">
-                    Welcome to the space <br /> where doctors listen to you
+                  <h2 className="header text-primary-dark font-bold md:text-[40px] text-[34px] leading-[48px] md:leading-[60px] text-center md:text-left capitalize">
+                    Welcome to the <span className="text-pink-soft">space</span>{" "}
+                    where doctors{" "}
+                    <span className="text-pink-soft">listen to you</span>
                   </h2>
                 </BoxReveal>
                 {/* <SparklesText
