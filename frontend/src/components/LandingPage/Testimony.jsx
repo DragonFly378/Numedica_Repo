@@ -58,7 +58,7 @@ const Testimony = () => {
             }
             isBackground={true}
           />
-          <div className="testimoy-contents w-full flex flex-nowrap scrolling-touch items-start space-x-2 overflow-x-scroll rounded-lg">
+          <div className="testimoy-contents w-full flex flex-nowrap  scrolling-touch items-start space-x-2 overflow-x-scroll rounded-lg pb-1 md:pb-2">
             {feedbackContents.map((item, itemIdx) => {
               return (
                 <>

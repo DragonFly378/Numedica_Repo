@@ -19,3 +19,25 @@ html {
   @apply shadow-none; /* Ensure no default shadow is applied */
   box-shadow: -1px -2px 26.5px 0px rgba(146, 174, 228, 0.21);
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #bcc3e9;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
