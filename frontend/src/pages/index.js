@@ -13,6 +13,7 @@ export default function Home() {
       <Head>
         <title>Numedica365</title>
         <meta property="og:title" content="Numedica365" key="title" />
+        <link rel="icon" type="image/png" href="/logoBrand.png" />
       </Head>
       <Layout>
         <Jumbotron />
