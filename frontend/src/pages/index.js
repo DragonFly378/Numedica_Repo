@@ -11,13 +11,13 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Numedica365</title>
+        <title>Numedica365 - Your healthcare space</title>
         <meta property="og:title" content="Numedica365" key="title" />
         <link rel="icon" type="image/png" href="/logoBrand.png" />
       </Head>
       <Layout>
         <Jumbotron />
-        <Workflow />
+        <Workflow />åß
         <Testimony />
         <Faq />
         <Pricing />
