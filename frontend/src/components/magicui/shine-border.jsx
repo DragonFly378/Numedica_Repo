@@ -26,7 +26,7 @@ export default function ShineBorder({
       }}
       className={cn(
         className,
-        "relative  w-fit place-items-center rounded-[--border-radius]  text-black dark:bg-black dark:text-white"
+        "relative  w-full place-items-center rounded-[--border-radius]  text-black dark:bg-black dark:text-white"
       )}
     >
       <div

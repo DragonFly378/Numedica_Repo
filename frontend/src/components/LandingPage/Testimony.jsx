@@ -52,9 +52,9 @@ const Testimony = () => {
       >
         <div className=" w-11/12 md:w-10/12 mx-auto">
           <HeaderSection
-            title={"What our patients say"}
+            title={"Testimoniales"}
             caption={
-              "Hear from those who matter most: our patients. Discover their stories and experiences with our care, and see how we have made a difference in their health and lives"
+              "Escuche a quienes más le importan: nuestros pacientes. Descubra sus historias y experiencias con nuestra atención y vea cómo hemos marcado una diferencia en su salud y sus vidas."
             }
             isBackground={true}
           />

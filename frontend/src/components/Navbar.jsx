@@ -12,24 +12,20 @@ const Navbar = ({ active }) => {
 
   const NavDatas = [
     {
-      title: "Home",
+      title: "Inicio",
       target: "/",
     },
     {
-      title: "How it works",
+      title: "Cómo funciona",
       target: "#works",
     },
     {
-      title: "Testimonials",
+      title: "Testimoniales",
       target: "#testimony",
     },
     {
-      title: "FaQ",
+      title: "Preguntas frecuentes",
       target: "#faq",
-    },
-    {
-      title: "Pricing",
-      target: "#pricing",
     },
   ];
 
@@ -49,7 +45,7 @@ const Navbar = ({ active }) => {
                   className="md:w-[200px] h-auto"
                 />
               </div>
-              <div className="nav-links flex gap-x-5 text-base text-putih m-auto">
+              <div className="nav-links flex gap-x-5 text-lg text-putih m-auto">
                 {NavDatas.map((link, linkIdx) => {
                   return (
                     <>
@@ -64,9 +60,16 @@ const Navbar = ({ active }) => {
                 })}
               </div>{" "}
               <div className="btn flex my-auto">
-                <button className="bg-primary text-white rounded-lg px-5 text-base py-3 hover:bg-primary-dark delay-75 transition-all">
-                  Book an appointment
-                </button>
+                {/* <button className="bg-primary text-white rounded-lg px-5 text-base py-3 hover:bg-primary-dark delay-75 transition-all">
+                  Agendar una consulta
+                </button> */}
+                <Button
+                  as={Link}
+                  href={"/regist"}
+                  text={"Agendar una consulta"}
+                  // icon={isOpen === true ? closeIcon : hamburgerIcon}
+                  style="bg-primary text-white my-auto flex rounded-lg px-5 text-base py-3 hover:bg-primary-dark delay-75 transition-all"
+                />
               </div>
             </div>
           </div>

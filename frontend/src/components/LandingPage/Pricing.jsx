@@ -91,7 +91,7 @@ const Pricing = () => {
           />
 
           <HeaderSection
-            title={"Online doctor visit pricing"}
+            title={"Costos por nuestro servicio"}
             caption={
               "Affordable, Transparent, and Accessible Care. Explore our straightforward pricing options for online doctor visits, ensuring you receive the care you need without any surprises. We believe in clear communication and fair pricing, so you can focus on your health with peace of mind."
             }
@@ -168,9 +168,9 @@ const Pricing = () => {
                         </h4>{" "}
                         <div className="grid grid-cols-12 gap-x-0 md:gap-x-1 mx-auto">
                           <div className="col-span-4 text-left caption text-sm md:text-base text-primary-dark ">
-                            Bill per visit
+                            Por consulta
                           </div>{" "}
-                          <div className="col-span-4  text-center">
+                          <div className="col-span-3  text-center">
                             <label class="inline-flex items-center cursor-pointer">
                               <input
                                 type="checkbox"
@@ -183,7 +183,7 @@ const Pricing = () => {
                             </label>
                           </div>
                           <div className="col-span-4 text-left caption text-sm md:text-base text-primary-dark">
-                            Membership <br />{" "}
+                            Agendar una consulta <br />{" "}
                             <span className="discount rounded-full text-center text-white bg-pink-soft px-2 py-1 md:px-3 md:py-1">
                               20% off
                             </span>

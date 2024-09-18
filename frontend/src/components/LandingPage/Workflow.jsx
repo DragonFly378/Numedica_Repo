@@ -13,27 +13,29 @@ import { FadeText } from "../magicui/fade-text";
 const Workflow = () => {
   const workflowContents = [
     {
-      title: "Book a Time",
-      caption:
-        "Easily schedule your appointment at a time that suits you best. We are here when you need us, ready to provide the care you deserve.",
+      title: "1. Ingresa a la página",
+      // caption:
+      //   "Easily schedule your appointment at a time that suits you best. We are here when you need us, ready to provide the care you deserve.",
       icon: dateIcon,
     },
     {
-      title: "Consultation",
-      caption:
-        "Meet with our attentive doctors who take the time to listen and understand your concerns. Your health journey starts with a compassionate conversation.",
+      title: "2. Date de alta con nombre de usuario y contraseña",
+      // caption:
+      //   "Meet with our attentive doctors who take the time to listen and understand your concerns. Your health journey starts with a compassionate conversation.",
       icon: phoneIcon,
     },
     {
-      title: "Get a Receipt",
-      caption:
-        "Receive a clear and detailed summary of your visit, ensuring you have all the information you need for your peace of mind.",
+      title:
+        "3. Responde unas preguntas que permitirán tener tu historial médico que ayudará al profesional de la salud para tomar decisiones. ",
+      // caption:
+      //   "Receive a clear and detailed summary of your visit, ensuring you have all the information you need for your peace of mind.",
       icon: receiptIcon,
     },
     {
-      title: "Treatment Routine",
-      caption:
-        "Follow your personalized treatment plan, designed to support your health goals. We're with you every step of the way, ensuring your care continues beyond the consultation.",
+      title:
+        "4. Selecciona a tu médico, fecha y hora que mejor se acomode a ti.",
+      // caption:
+      //   "Follow your personalized treatment plan, designed to support your health goals. We're with you every step of the way, ensuring your care continues beyond the consultation.",
       icon: peopleSyncIcon,
     },
   ];
@@ -42,10 +44,8 @@ const Workflow = () => {
       <section id="works" className="workflow-section md:my-[150px] my-[90px]">
         <div className=" md:w-10/12 w-11/12 mx-auto">
           <HeaderSection
-            title={"How it works?"}
-            caption={
-              "Experience clarity and comfort in your care. Discover how our straightforward and patient-centered approach carefully guides you through each stage, making sure your health, well-being, and peace of mind are our top priorities."
-            }
+            title={"¿Cómo funciona?"}
+            caption={"Es muy sencillo utilizar nuestra plataforma:"}
             isBackground={false}
           />
           <div className="workflow-contents grid grid-cols-12 md:gap-x-4 gap-y-4 md:w-10/12 w-11/12 mx-auto">
@@ -58,33 +58,40 @@ const Workflow = () => {
                     framerProps={{
                       show: { transition: { delay: 0.2 * (itemIdx + 1) } },
                     }}
-                    className={"col-span-full md:col-span-3 "}
+                    className={
+                      " workflow-item justify-center col-span-12 md:col-span-3"
+                    }
                     text={
                       <ShineBorder
                         borderWidth={1}
+                        // className={
+                        //   "col-span-full md:col-span-3 w-full justify-center bg-white"
+                        // }
                         className={
-                          "workflow-item col-span-full md:col-span-3 bg-white rounded-xl py-8 px-3 h-full"
+                          " bg-white relative col-span-12 md:col-span-3  w-full rounded-xl py-8 px-3"
                         }
                         color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
                       >
-                        <div className="flex flex-col">
-                          <div className="flow-header text-center">
-                            <Image
-                              className="mx-auto md:mb-1 w-2/12 md:w-1/5 h-auto"
-                              src={item.icon}
-                              width={0}
-                              height={0}
-                              sizes="100vw"
-                              alt={item.title}
-                              // style={{ width: "20%", height: "auto" }} // optional
-                            />
-                            <h4 className="text-primary-dark font-bold text-base md:text-lg text-center">
-                              {item.title}
-                            </h4>
+                        <div className={"   "}>
+                          <div className="flex flex-col">
+                            <div className="flow-header text-center">
+                              <Image
+                                className="mx-auto md:mb-1 w-2/12 md:w-1/5 h-auto"
+                                src={item.icon}
+                                width={0}
+                                height={0}
+                                sizes="100vw"
+                                alt={item.title}
+                                // style={{ width: "20%", height: "auto" }} // optional
+                              />
+                              <h4 className="text-primary-dark font-bold text-base md:text-lg text-center">
+                                {item.title}
+                              </h4>
+                            </div>
                           </div>
-                          <div className="caption md:mt-4 text-primary-dark text-center text-sm">
+                          {/* <div className="caption md:mt-4 text-primary-dark text-center text-sm">
                             {item.caption}
-                          </div>
+                          </div> */}
                         </div>
                       </ShineBorder>
                     }

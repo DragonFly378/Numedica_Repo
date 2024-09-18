@@ -45,10 +45,8 @@ const Faq = () => {
       <section id="faq" className="faq-section md:my-[150px] my-[90px]">
         <div className="w-11/12 md:w-10/12 mx-auto">
           <HeaderSection
-            title={"Frequently asked Questions"}
-            caption={
-              "Got Questions? We've Got Answers. Find quick and clear information on booking, treatments, and services in our Frequently Asked Questions section. We're here to help every step of the way"
-            }
+            title={"Preguntas frecuentes - FAQ"}
+            caption={"Nos las compartirá el equipo de Fabrice"}
             isBackground={false}
           />
 
