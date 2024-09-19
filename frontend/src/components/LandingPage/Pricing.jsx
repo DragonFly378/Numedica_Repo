@@ -93,7 +93,7 @@ const Pricing = () => {
           <HeaderSection
             title={"Costos por nuestro servicio"}
             caption={
-              "Affordable, Transparent, and Accessible Care. Explore our straightforward pricing options for online doctor visits, ensuring you receive the care you need without any surprises. We believe in clear communication and fair pricing, so you can focus on your health with peace of mind."
+              "Atención médica asequible, transparente y accesible. Explore nuestras opciones de precios sencillos para consultas médicas en línea, lo que le garantiza que recibirá la atención que necesita sin sorpresas. Creemos en la comunicación clara y los precios justos, para que pueda concentrarse en su salud con tranquilidad."
             }
             isBackground={false}
           />
@@ -170,7 +170,7 @@ const Pricing = () => {
                           <div className="col-span-4 text-left caption text-sm md:text-base text-primary-dark ">
                             Por consulta
                           </div>{" "}
-                          <div className="col-span-3  text-center">
+                          <div className="col-span-4  text-center">
                             <label class="inline-flex items-center cursor-pointer">
                               <input
                                 type="checkbox"
