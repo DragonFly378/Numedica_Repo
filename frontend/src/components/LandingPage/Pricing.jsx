@@ -7,6 +7,8 @@ import { BorderBeam } from "../magicui/border-beam";
 import ShineBorder from "@/components/magicui/shine-border";
 import { FadeText } from "../magicui/fade-text";
 import SparklesText from "../magicui/sparkles-text";
+import Button from "../Button";
+import Link from "next/link";
 
 const Pricing = () => {
   const [isChecked, setIsChecked] = useState(false);
@@ -217,9 +219,16 @@ const Pricing = () => {
                             )
                           )}
                         </div>
-                        <button className="bg-primary-dark text-white md:text-lg md:py-2 py-1 rounded-md md:rounded-lg">
-                          {isChecked ? "Get membership plan" : "Get visit plan"}
-                        </button>
+
+                        <Button
+                          as={Link}
+                          href={"/membership"}
+                          text={`${
+                            isChecked ? "Get membership plan" : "Get visit plan"
+                          }`}
+                          // icon={isOpen === true ? closeIcon : hamburgerIcon}
+                          style="flex justify-center bg-primary-dark text-white md:text-lg md:py-2 py-1 rounded-md md:rounded-lg"
+                        />
                       </div>
                     </div>
                     {/* <BorderBeam /> */}

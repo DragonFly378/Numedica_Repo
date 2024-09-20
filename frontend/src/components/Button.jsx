@@ -28,6 +28,7 @@ const Button = ({
   style,
   text,
   icon,
+  isDisabled,
   iconStyle,
   iconPosition: iconPosition = "right",
   onClick,
@@ -39,6 +40,7 @@ const Button = ({
       "secondary py-[10px] px-[10px] md:py-[10px] md:px-[20px]  flex gap-x-3",
   };
 
+  console.log(isDisabled);
   return (
     <Component
       type={btnType}
@@ -47,6 +49,7 @@ const Button = ({
       rel="noopener noreferrer"
       target={target}
       className={`${variants[type]} ${style}`}
+      disabled={isDisabled}
     >
       {iconPosition === "left" && (
         <IconComponent iconSrc={icon} iconStyle={iconStyle} />

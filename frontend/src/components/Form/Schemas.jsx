@@ -19,3 +19,11 @@ export const registerSchemas = yup.object().shape({
     .string()
     .oneOf([yup.ref("password"), null], "*Password tidak sama"),
 });
+
+export const loginSchemas = yup.object().shape({
+  email: yup
+    .string()
+    .email("Masukkan dengan format")
+    .required("Email is required"),
+  password: yup.string().required("Password is required"),
+});
