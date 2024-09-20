@@ -68,7 +68,7 @@ const Workflow = () => {
                         //   "col-span-full md:col-span-3 w-full justify-center bg-white"
                         // }
                         className={
-                          " bg-white relative col-span-12 md:col-span-3  w-full rounded-xl py-8 px-3"
+                          " bg-white relative col-span-12 md:col-span-3 h-full w-full rounded-xl py-8 px-3"
                         }
                         color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
                       >

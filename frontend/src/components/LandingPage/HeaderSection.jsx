@@ -1,15 +1,23 @@
 import React from "react";
 import BlurFade from "@/components/magicui/blur-fade";
 
-const HeaderSection = ({ title, caption, isBackground }) => {
+const HeaderSection = ({
+  title,
+  caption,
+  isBackground,
+  style,
+  headerStyle,
+}) => {
   return (
     <>
       <BlurFade delay={0.25} inView={true}>
-        <div className="header-section text-center md:w-6/12 mx-auto mb-8 md:mb-12">
+        <div
+          className={`header-section ${style} text-center md:w-7/12 mx-auto mb-8 md:mb-12`}
+        >
           <div
-            className={`header-content text-xl md:text-2xl font-bold mb-1 ${
+            className={`header-content text-xl ${headerStyle} md:text-2xl font-bold mb-1  ${
               isBackground ? "text-white" : "text-primary-dark"
-            }`}
+            } `}
           >
             {title}
           </div>

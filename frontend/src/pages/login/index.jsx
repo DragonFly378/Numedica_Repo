@@ -39,7 +39,7 @@ const Index = () => {
         <link rel="icon" type="image/png" href="/logoBrand.png" />
       </Head>
       <Layout>
-        <section className="login w-11/12 mx-auto md:my-28 my-20">
+        <section className="login w-11/12 mx-auto  md:my-[120px] mt-[150px] mb-[90px]">
           <div className="login-contents mx-auto grid grid-cols-12 items-center">
             <div className="left-content col-span-12 md:col-span-6 items-center mx-auto mb-14 md:mb-0 ">
               <div className="image w-64 md:w-96">
@@ -122,7 +122,7 @@ const Index = () => {
                     </div>
                     <Button
                       btnType={"submit"}
-                      isDisabled={isChecked}
+                      isDisabled={!isChecked}
                       href={"/"}
                       text={"Registrarme"}
                       // icon={isOpen === true ? closeIcon : hamburgerIcon}

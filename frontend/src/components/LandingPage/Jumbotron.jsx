@@ -71,7 +71,7 @@ const Jumbotron = () => {
                 </BoxReveal>
               </div>
             </div>
-            <div className="md:col-span-6 col-span-full">
+            <div className="right-content md:col-span-6 col-span-full">
               <FadeText
                 // className="text-4xl font-bold text-black dark:text-white"
                 direction="up"
