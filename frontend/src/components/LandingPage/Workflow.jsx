@@ -14,28 +14,28 @@ const Workflow = () => {
   const workflowContents = [
     {
       title: "1. Ingresa a la página",
-      // caption:
-      //   "Easily schedule your appointment at a time that suits you best. We are here when you need us, ready to provide the care you deserve.",
+      caption:
+        "Easily schedule your appointment at a time that suits you best. We are here when you need us, ready to provide the care you deserve.",
       icon: dateIcon,
     },
     {
       title: "2. Date de alta con nombre de usuario y contraseña",
-      // caption:
-      //   "Meet with our attentive doctors who take the time to listen and understand your concerns. Your health journey starts with a compassionate conversation.",
+      caption:
+        "Meet with our attentive doctors who take the time to listen and understand your concerns. Your health journey starts with a compassionate conversation.",
       icon: phoneIcon,
     },
     {
       title:
         "3. Responde unas preguntas que permitirán tener tu historial médico que ayudará al profesional de la salud para tomar decisiones. ",
-      // caption:
-      //   "Receive a clear and detailed summary of your visit, ensuring you have all the information you need for your peace of mind.",
+      caption:
+        "Receive a clear and detailed summary of your visit, ensuring you have all the information you need for your peace of mind.",
       icon: receiptIcon,
     },
     {
       title:
         "4. Selecciona a tu médico, fecha y hora que mejor se acomode a ti.",
-      // caption:
-      //   "Follow your personalized treatment plan, designed to support your health goals. We're with you every step of the way, ensuring your care continues beyond the consultation.",
+      caption:
+        "Follow your personalized treatment plan, designed to support your health goals. We're with you every step of the way, ensuring your care continues beyond the consultation.",
       icon: peopleSyncIcon,
     },
   ];
@@ -84,14 +84,14 @@ const Workflow = () => {
                                 alt={item.title}
                                 // style={{ width: "20%", height: "auto" }} // optional
                               />
-                              <h4 className="text-primary-dark font-bold text-base md:text-lg text-center">
+                              <h4 className="text-primary-dark font-bold text-base md:text-lg text-center min-h-14 line-clamp-2">
                                 {item.title}
                               </h4>
                             </div>
                           </div>
-                          {/* <div className="caption md:mt-4 text-primary-dark text-center text-sm">
+                          <div className="caption md:mt-4 text-primary-dark text-center text-sm  line-clamp-5">
                             {item.caption}
-                          </div> */}
+                          </div>
                         </div>
                       </ShineBorder>
                     }
